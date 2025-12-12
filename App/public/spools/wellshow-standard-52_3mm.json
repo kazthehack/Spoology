@@ -1,0 +1,10 @@
+{
+  "id": "wellshow-standard-52_3mm",
+  "brand": "Wellshow",
+  "type": "Standard plastic spool, 52.3mm core",
+  "image": "/images/spools/wellshow-standard-52_3mm.jpg",
+  "description": "Wellshow-branded spool with a wide six-spoke architecture, deep central barrel and open-slot spoke pattern for moderate ventilation.",
+  "emptySpoolWeightGrams": 191.1,
+  "coreInnerDiameterMm": 52.3,
+  "refillable": false
+}

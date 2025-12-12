@@ -1,0 +1,10 @@
+{
+  "id": "bestworth-generic-plastic-55_1mm",
+  "brand": "BestWorth/Generic",
+  "type": "Plastic spool, 55.1mm core",
+  "image": "/images/spools/bestworth-generic-plastic-55_1mm.jpg",
+  "description": "Black plastic OEM spool with two long filament feed slots on opposite sides, a multi-spoke hub and a pair of oval locking holes near the rim. Smooth unvented faces.",
+  "emptySpoolWeightGrams": 182.2,
+  "coreInnerDiameterMm": 55.1,
+  "refillable": false
+}

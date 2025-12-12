@@ -1,0 +1,10 @@
+{
+  "id": "generic-vented-55mm",
+  "brand": "Generic",
+  "type": "Standard vented spool, 55mm core",
+  "image": "/images/spools/generic-vented-55mm.jpg",
+  "description": "Generic OEM spool with nine large tapered vent windows around the face, reinforced rim and medium overall mass.",
+  "emptySpoolWeightGrams": 136.1,
+  "coreInnerDiameterMm": 55.0,
+  "refillable": false
+}

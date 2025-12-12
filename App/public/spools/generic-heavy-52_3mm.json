@@ -1,0 +1,10 @@
+{
+  "id": "generic-heavy-52_3mm",
+  "brand": "Generic",
+  "type": "Heavy-duty spool, 52.3mm core",
+  "image": "/images/spools/generic-heavy-52_3mm.jpg",
+  "description": "Heavy-duty spool similar to Gears3D patterns with thick flanges, dense reinforcement ribs and an eight-spoke hub. Noticeably heavier than standard variants.",
+  "emptySpoolWeightGrams": 203.2,
+  "coreInnerDiameterMm": 52.3,
+  "refillable": false
+}

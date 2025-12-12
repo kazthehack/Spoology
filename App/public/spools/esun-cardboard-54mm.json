@@ -1,0 +1,10 @@
+{
+  "id": "esun-cardboard-54mm",
+  "brand": "eSUN",
+  "type": "Cardboard spool, 54mm core",
+  "image": "/images/spools/esun-cardboard-54mm.jpg",
+  "description": "Cardboard spool with a 54mm inner core, smooth paperboard flanges, three small perimeter holes and a single filament clip slot. Lightweight eco-style carrier used across multiple ESUN lines.",
+  "emptySpoolWeightGrams": 164.2,
+  "coreInnerDiameterMm": 54.0,
+  "refillable": false
+}

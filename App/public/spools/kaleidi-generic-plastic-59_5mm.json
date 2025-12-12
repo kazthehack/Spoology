@@ -1,0 +1,10 @@
+{
+  "id": "kaleidi-generic-plastic-59_5mm",
+  "brand": "Kaleidi/Generic",
+  "type": "Plastic spool, 59.5mm core",
+  "image": "/images/spools/kaleidi-generic-plastic-59_5mm.jpg",
+  "description": "Black plastic spool with a 59.5mm inner core, two long feed slots, a shorter curved slot near the rim and periodic rectangular cutouts around the outer edge.",
+  "emptySpoolWeightGrams": 195.3,
+  "coreInnerDiameterMm": 59.5,
+  "refillable": false
+}

@@ -1,0 +1,11 @@
+{
+  "brand": "Bambu",
+  "type": "White Perforated",
+  "image": "/images/spools/bambu_spool.png",
+  "description": "White plastic spool with dense perforated hole pattern across the flanges. Designed as a refillable core.",
+  "filamentDiameterMm": 1.75,
+  "filamentWeightGrams": 1000,
+  "emptySpoolWeightGrams": 212.4,
+  "refillable": true,
+  "id": "bambu-petg-hf-white-perforated"
+}
