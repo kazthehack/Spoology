@@ -7,6 +7,22 @@ const CARDBOARD_CORE_WEIGHT_GRAMS = 40;
 
 const isDev = import.meta.env.MODE !== "production";
 
+// In GitHub Pages *project* deployments, assets live under the repository base path
+// (e.g. https://<user>.github.io/<repo>/...). Vite exposes this via BASE_URL.
+const BASE_URL = import.meta.env.BASE_URL;
+
+function withBaseUrl(path?: string | null): string | undefined {
+  if (!path) return undefined;
+  // absolute URLs (including data/blob) should be left as-is
+  if (/^(https?:)?\/\//i.test(path) || path.startsWith("data:") || path.startsWith("blob:")) {
+    return path;
+  }
+  // JSON currently stores image paths like "/images/...". Strip the leading slash
+  // so BASE_URL can be applied correctly ("/Spoology/" -> "/Spoology/images/..." ).
+  const cleaned = path.startsWith("/") ? path.slice(1) : path;
+  return `${BASE_URL}${cleaned}`;
+}
+
 const SPOOL_FILES: string[] = [
   "bambu-petg-hf-white-perforated.json",
   "bestworth-generic-plastic-55_1mm.json",
@@ -30,9 +46,12 @@ async function loadSpools(): Promise<Spool[]> {
   const results: Spool[] = [];
   for (const file of SPOOL_FILES) {
     try {
-      const res = await fetch(`/spools/${file}`);
+      const res = await fetch(`${BASE_URL}spools/${file}`);
       if (!res.ok) continue;
       const spool = (await res.json()) as Spool;
+
+      // Normalize image paths for GitHub Pages project base paths.
+      spool.image = withBaseUrl(spool.image);
       results.push(spool);
     } catch {
       // ignore bad file
@@ -305,7 +324,7 @@ loadSpools().then(setSpools);
             <div className="brand-row">
               <div className="brand-mark">
                 <img
-                  src="/spoology-logo.png"
+	                  src={withBaseUrl("spoology-logo.png")}
                   alt="Spoology logo"
                 />
               </div>
@@ -850,7 +869,9 @@ loadSpools().then(setSpools);
                           ? Number(contribEmptyWeight)
                           : undefined,
                         refillable: contribRefillable || undefined,
-                        image: contribResult?.spool?.image ?? "/images/spools/your-image.png",
+                        image:
+                          withBaseUrl(contribResult?.spool?.image) ??
+                          withBaseUrl("/images/spools/your-image.png"),
                       },
                       null,
                       2
