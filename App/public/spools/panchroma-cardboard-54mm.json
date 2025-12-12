@@ -1,0 +1,10 @@
+{
+  "id": "panchroma-cardboard-54mm",
+  "brand": "Panchroma",
+  "type": "Cardboard spool, 54mm core",
+  "image": "/images/spools/panchroma-cardboard-54mm.png",
+  "description": "Panchroma cardboard spool with a ~54mm inner core. Lightweight paperboard flanges with perimeter holes and large cutouts near the hub. Common eco-style carrier for Panchroma PLA lines.",
+  "emptySpoolWeightGrams": 148.8,
+  "coreInnerDiameterMm": 54.0,
+  "refillable": false
+}

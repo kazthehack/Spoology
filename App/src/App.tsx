@@ -40,6 +40,7 @@ const SPOOL_FILES: string[] = [
   "r3d-generic-open-52mm.json",
   "r3d-generic-plastic-53mm-radial.json",
   "wellshow-standard-52_3mm.json",
+  "panchroma-cardboard-54mm.json"
 ];
 
 async function loadSpools(): Promise<Spool[]> {
