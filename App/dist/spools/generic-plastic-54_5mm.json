@@ -1,0 +1,10 @@
+{
+  "id": "generic-plastic-54_5mm",
+  "brand": "Generic",
+  "type": "Plastic spool, 54.5mm core",
+  "image": "/images/spools/generic-plastic-54_5mm.jpg",
+  "description": "Generic black plastic spool with a 54.5mm inner core, large open-spoke frame, round perimeter holes and a reinforced hub with radial ribs.",
+  "emptySpoolWeightGrams": 125.1,
+  "coreInnerDiameterMm": 54.5,
+  "refillable": false
+}

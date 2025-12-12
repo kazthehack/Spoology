@@ -1,0 +1,10 @@
+{
+  "id": "generic-largecore-72mm",
+  "brand": "Generic",
+  "type": "Large-core vented plastic spool, 72mm core",
+  "image": "/images/spools/generic-largecore-72mm.jpg",
+  "description": "Lightweight black plastic spool with an oversized 72mm inner core, six wide triangular spokes and circular perimeter vent holes. Thin face plates and a generic OEM label.",
+  "emptySpoolWeightGrams": 128.2,
+  "coreInnerDiameterMm": 72.0,
+  "refillable": false
+}

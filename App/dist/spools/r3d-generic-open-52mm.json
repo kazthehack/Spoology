@@ -1,0 +1,10 @@
+{
+  "id": "r3d-generic-open-52mm",
+  "brand": "R3D",
+  "type": "Lightweight open-frame spool, 52mm core",
+  "image": "/images/spools/r3d-generic-open-52mm.jpg",
+  "description": "Lightweight R3D spool with a seven-spoke open structure, thin flanges and minimal reinforcement, optimized for low mass.",
+  "emptySpoolWeightGrams": 112.9,
+  "coreInnerDiameterMm": 52.0,
+  "refillable": false
+}

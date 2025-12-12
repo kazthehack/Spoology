@@ -1,0 +1,10 @@
+{
+  "id": "r3d-generic-plastic-53mm-radial",
+  "brand": "R3D/Generic",
+  "type": "Radial vented plastic spool, 53mm core",
+  "image": "/images/spools/r3d-generic-plastic-53mm-radial.jpg",
+  "description": "Black plastic spool with radial dotted ventilation made of circular holes arranged in curved arcs, a single elongated feed slot and a six-spoke reinforced hub.",
+  "emptySpoolWeightGrams": 195.0,
+  "coreInnerDiameterMm": 53.0,
+  "refillable": false
+}

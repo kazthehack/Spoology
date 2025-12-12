@@ -1,0 +1,10 @@
+{
+  "id": "kingroon-cardboard-53_2mm",
+  "brand": "Kingroon",
+  "type": "Cardboard spool, 53.2mm core",
+  "image": "/images/spools/kingroon-cardboard-53_2mm.jpg",
+  "description": "Kingroon cardboard spool with a 53.2mm inner core, flat paperboard faces, perimeter holes and a single filament exit slot.",
+  "emptySpoolWeightGrams": 152.7,
+  "coreInnerDiameterMm": 53.2,
+  "refillable": false
+}

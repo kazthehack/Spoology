@@ -1,6 +1,6 @@
 {
   "name": "filament-spool-toolkit",
-  "version": "0.2.0",
+  "version": "0.0.19",
   "private": true,
   "scripts": {
     "dev": "vite",

@@ -1,0 +1,10 @@
+{
+  "id": "doweave-plastic-53_3mm-honeycomb",
+  "brand": "Doweave",
+  "type": "Perforated honeycomb spool, 53.3mm core",
+  "image": "/images/spools/doweave-plastic-53_3mm-honeycomb.jpg",
+  "description": "Black plastic spool with a full-face hexagonal honeycomb ventilation pattern and an eight-spoke center hub. High-airflow design with dense perforation and no elongated feed slots.",
+  "emptySpoolWeightGrams": 221.6,
+  "coreInnerDiameterMm": 53.3,
+  "refillable": false
+}
