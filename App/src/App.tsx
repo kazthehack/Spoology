@@ -609,7 +609,7 @@ loadSpools().then(setSpools);
                             <dd>{s.filamentDiameterMm} mm</dd>
                           </>
                         )}
-                        {s.coreInnerDiameterMm && (
+                        {s.coreInnerDiameterMm !== undefined&& (
                           <>
                             <dt>Core ID</dt>
                             <dd>{s.coreInnerDiameterMm} mm</dd>
