@@ -1,0 +1,10 @@
+{
+  "id": "wellshow-plastic-2",
+  "brand": "Wellshow",
+  "type": "Plastic spool, unknown core",
+  "image": "/images/spools/wellshow-plastic-2.jpg",
+  "description": "Wellshow plastic spool featuring eight narrow rectangular spoke cutouts, slightly concave flange faces with visible mold seam divisions, and a reinforced thick central hub. Heavier structural class (~161.1g). Core inner diameter not measured.",
+  "emptySpoolWeightGrams": 161.1,
+  "coreInnerDiameterMm": 0,
+  "refillable": false
+}

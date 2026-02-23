@@ -1,0 +1,10 @@
+{
+  "id": "elegoo-cardboard-1",
+  "brand": "Elegoo",
+  "type": "Cardboard spool, unknown core",
+  "image": "/images/spools/elegoo-cardboard-1.jpg",
+  "description": "Elegoo cardboard spool built from compressed fiberboard flanges with printed branding and a plastic inner hub sleeve. Ventilation includes two elongated horizontal slots and one large curved cutout segment. Lightweight eco-style spool (~150.5g). Core inner diameter not measured.",
+  "emptySpoolWeightGrams": 150.5,
+  "coreInnerDiameterMm": 0,
+  "refillable": false
+}

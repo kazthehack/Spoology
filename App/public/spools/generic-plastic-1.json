@@ -1,0 +1,10 @@
+{
+  "id": "generic-plastic-1",
+  "brand": "Generic",
+  "type": "Plastic spool, unknown core",
+  "image": "/images/spools/generic-plastic-1.jpg",
+  "description": "Generic plastic spool with smooth flange faces, six evenly spaced spoke cutouts, a rounded outer flange lip, and a reinforced hub. Lightweight consumer-class mold (~135.5g). Core inner diameter not measured.",
+  "emptySpoolWeightGrams": 135.5,
+  "coreInnerDiameterMm": 0,
+  "refillable": false
+}
