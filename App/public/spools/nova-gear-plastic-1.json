@@ -1,10 +1,10 @@
 {
-"id": "nova-gear-plastic-1",
-"brand": "Nova Gear",
-"type": "Plastic spool, 52.85mm core",
-"image": "/images/spools/nova-gear-plastic-1.jpg",
-"description": "Black injection-molded plastic spool with smooth flange faces, mixed ventilation geometry using elongated oval slots and large triangular-trapezoidal windows, and multiple small perimeter clip slots. Hub structure uses radial reinforcement ribs from the core wall to the barrel. Medium structural weight class.",
-"emptySpoolWeightGrams": 141.4,
-"coreInnerDiameterMm": 52.85,
-"refillable": false
+  "id": "nova-gear-plastic-1",
+  "brand": "Nova Gear",
+  "type": "Plastic - tri-cutout ribbed-hub",
+  "image": "/images/spools/nova-gear-plastic-1.jpg",
+  "description": "Black injection-molded plastic spool with smooth flange faces, mixed ventilation geometry using elongated oval slots and large triangular-trapezoidal windows, and multiple small perimeter clip slots. Hub structure uses radial reinforcement ribs from the core wall to the barrel. Medium structural weight class.",
+  "emptySpoolWeightGrams": 141.4,
+  "coreInnerDiameterMm": 52.85,
+  "refillable": false
 }

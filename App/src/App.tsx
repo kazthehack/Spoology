@@ -176,12 +176,18 @@ loadSpools().then(setSpools);
     [spoolsByBrand]
   );
 
-  // Reset includeCore if we switch to a non-refillable spool
+  // Set includeCore default based on selected spool:
+  // - non-refillable: always false
+  // - Bambu refillable: true by default
+  // - other refillable spools: false by default
   useEffect(() => {
-    if (!currentSpool?.refillable && includeCore) {
+    if (!currentSpool?.refillable) {
       setIncludeCore(false);
+      return;
     }
-  }, [currentSpool, includeCore]);
+    const isBambu = currentSpool.brand?.toLowerCase().includes("bambu") ?? false;
+    setIncludeCore(isBambu);
+  }, [currentSpool]);
 
   const [remainingWeight, remainingLength, remainingPercent, safeWeight] = useMemo(() => {
     if (!currentSpool) return [null, null, null, null] as const;

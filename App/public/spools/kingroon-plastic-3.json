@@ -1,9 +1,9 @@
 {
-"id": "kingroon-plastic-3",
-"brand": "Kingroon",
-"type": "Plastic spool, core not measured",
-"image": "/images/spools/kingroon-plastic-3.jpg",
-"description": "Translucent injection-molded plastic spool with smooth matte flange surfaces, eight elongated triangular ventilation windows, an inner ring of circular hub-lightening holes, and a reinforced cylindrical hub wall. Sidewall includes multiple elongated oval access slots and a low-mass open-frame structure. Core inner diameter not measured.",
-"emptySpoolWeightGrams": 103.8,
-"refillable": false
+  "id": "kingroon-plastic-3",
+  "brand": "Kingroon",
+  "type": "Plastic - translucent tri-window",
+  "image": "/images/spools/kingroon-plastic-3.jpg",
+  "description": "Translucent injection-molded plastic spool with smooth matte flange surfaces, eight elongated triangular ventilation windows, an inner ring of circular hub-lightening holes, and a reinforced cylindrical hub wall. Sidewall includes multiple elongated oval access slots and a low-mass open-frame structure. Core inner diameter not measured.",
+  "emptySpoolWeightGrams": 103.8,
+  "refillable": false
 }

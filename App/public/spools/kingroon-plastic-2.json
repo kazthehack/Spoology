@@ -1,10 +1,10 @@
 {
   "id": "kingroon-plastic-2",
   "brand": "Kingroon",
-  "type": "Plastic spool, unknown core",
+  "type": "Plastic - cluster-perforated oval-slot",
   "image": "/images/spools/kingroon-plastic-2.jpg",
   "description": "Kingroon plastic spool with circular perforation clusters across the flange surface, an elongated oval slot near the outer edge, and a reinforced multi-rib hub. Same design family as the base Kingroon spool but a different color variant (white vs base black). Core inner diameter not measured.",
-  "emptySpoolWeightGrams": 138.0,
+  "emptySpoolWeightGrams": 138,
   "coreInnerDiameterMm": 0,
   "refillable": false
 }
