@@ -1,0 +1,10 @@
+{
+"id": "sunlu-plastic-v2-1",
+"brand": "SUNLU",
+"type": "Plastic refillable spool (V2), 63mm core",
+"image": "/images/spools/sunlu-plastic-v2-1.jpg",
+"description": "SUNLU V2 refillable plastic spool with smooth matte flanges, dense radial circular perforation fields, and four large elongated triangular ventilation windows. Hub section uses a wide reinforced cylindrical core wall with keyed inner geometry, plus elongated sidewall access slots. Medium structural weight class (~168.1g).",
+"emptySpoolWeightGrams": 168.1,
+"coreInnerDiameterMm": 63,
+"refillable": true
+}

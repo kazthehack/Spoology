@@ -37,6 +37,7 @@ const SPOOL_FILES: string[] = [
   "kaleidi-generic-plastic-59_5mm.json",
   "kingroon-cardboard-53_2mm.json",
   "kingroon-plastic-58_2mm.json",
+  "nova-gear-plastic-1.json",
   "r3d-generic-open-52mm.json",
   "r3d-generic-plastic-53mm-radial.json",
   "wellshow-standard-52_3mm.json",
@@ -44,8 +45,10 @@ const SPOOL_FILES: string[] = [
   "generic-plastic-1.json",
  "wellshow-plastic-2.json",
  "kingroon-plastic-2.json",
+ "kingroon-plastic-3.json",
  "dowell-plastic-1.json",
  "elegoo-cardboard-1.json",
+ "sunlu-plastic-v2-1.json",
  "sunlu-plastic-v3-1.json"
 ];
 
@@ -940,7 +943,7 @@ loadSpools().then(setSpools);
                 <dd>{selectedSpool.filamentDiameterMm} mm</dd>
               </>
             )}
-            {selectedSpool.coreInnerDiameterMm && (
+            {selectedSpool.coreInnerDiameterMm !== undefined && (
               <>
                 <dt>Core inner diameter</dt>
                 <dd>{selectedSpool.coreInnerDiameterMm} mm</dd>
