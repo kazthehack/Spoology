@@ -271,6 +271,25 @@ main {
   gap: 10px;
 }
 
+.field input[readonly],
+.field textarea[readonly] {
+  background: #f8fafc;
+  color: var(--text);
+  cursor: default;
+}
+
+.spool-details {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 12px;
+}
+
+.spool-details h2 {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+}
+
 .checkbox-row {
   flex-direction: row;
   align-items: center;
@@ -301,6 +320,43 @@ main {
 .results-box h3 {
   margin: 0 0 6px;
   font-size: 0.9rem;
+}
+
+.estimate-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.estimate-tile {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: #f8fafc;
+  padding: 10px;
+  min-width: 0;
+}
+
+.estimate-tile h3 {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+}
+
+.estimate-tile dl {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 6px 10px;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.estimate-tile dt {
+  color: var(--text-muted);
+}
+
+.estimate-tile dd {
+  margin: 0;
+  font-weight: 600;
+  text-align: right;
 }
 
 .hint {
@@ -471,6 +527,10 @@ footer code {
 }
 
 @media (max-width: 640px) {
+  .estimate-tiles {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .card-grid {
     grid-template-columns: minmax(0, 1fr);
   }

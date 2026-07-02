@@ -189,10 +189,18 @@ loadSpools().then(setSpools);
     setIncludeCore(isBambu);
   }, [currentSpool]);
 
-  const [remainingWeight, remainingLength, remainingPercent, safeWeight] = useMemo(() => {
-    if (!currentSpool) return [null, null, null, null] as const;
+  const [
+    remainingWeight,
+    remainingLength,
+    remainingPercent,
+    conservativeWeight,
+    conservativeLength,
+    conservativePercent,
+  ] = useMemo(() => {
+    if (!currentSpool) return [null, null, null, null, null, null] as const;
     const measured = parseFloat(measuredWeight);
-    if (!measured || measured <= 0) return [null, null, null, null] as const;
+    if (!measured || measured <= 0)
+      return [null, null, null, null, null, null] as const;
 
     const selectedNominal = parseFloat(spoolSize || "0");
     const nominalFilament =
@@ -214,31 +222,28 @@ loadSpools().then(setSpools);
     );
     const percent =
       nominalFilament > 0 ? (clamped / nominalFilament) * 100 : null;
-    const safe = clamped * 0.9;
+    const conservative = clamped * 0.9;
+    const conservativeLength = estimateLengthMeters(
+      conservative,
+      currentSpool.filamentDiameterMm
+    );
+    const conservativePercent =
+      nominalFilament > 0 ? (conservative / nominalFilament) * 100 : null;
 
-    return [clamped, length, percent, safe] as const;
+    return [
+      clamped,
+      length,
+      percent,
+      conservative,
+      conservativeLength,
+      conservativePercent,
+    ] as const;
   }, [currentSpool, measuredWeight, spoolSize, includeCore]);
 
-  const taxonomyText = useMemo(() => {
-    if (!currentSpool) return "";
-    const lines: string[] = [];
-    lines.push(`Brand: ${currentSpool.brand ?? "—"}`);
-    lines.push(`Type: ${currentSpool.type ?? "—"}`);
-    lines.push(
-      `Refillable: ${currentSpool.refillable ? "Yes (master spool core)" : "No"}`
-    );
-    if (currentSpool.filamentDiameterMm)
-      lines.push(`Filament diameter: ${currentSpool.filamentDiameterMm} mm`);
-    if (currentSpool.filamentWeightGrams)
-      lines.push(`Nominal filament weight: ${currentSpool.filamentWeightGrams} g`);
-    if (currentSpool.emptySpoolWeightGrams)
-      lines.push(`Empty spool weight: ${currentSpool.emptySpoolWeightGrams} g`);
-    if (currentSpool.description) {
-      lines.push("");
-      lines.push(currentSpool.description);
-    }
-    return lines.join("\n");
-  }, [currentSpool]);
+  const emptySpoolWeightText =
+    currentSpool?.emptySpoolWeightGrams != null
+      ? `${currentSpool.emptySpoolWeightGrams} g`
+      : "";
 
   const filteredSpoolsForLibrary = useMemo(
     () => fuzzyBrandFilter(spools, brandFilter),
@@ -467,15 +472,29 @@ loadSpools().then(setSpools);
                 )}
               </div>
 
-              <div className="field">
-                <label htmlFor="spoolInfo">Spool Details / Taxonomy</label>
-                <textarea
-                  id="spoolInfo"
-                  readOnly
-                  value={taxonomyText}
-                  placeholder="Select a brand and spool type to see details."
-                  rows={6}
-                />
+              <div className="spool-details">
+                <h2>Spool Details</h2>
+                <div className="field">
+                  <label htmlFor="emptySpoolWeight">Empty Spool Weight</label>
+                  <input
+                    id="emptySpoolWeight"
+                    type="text"
+                    readOnly
+                    value={emptySpoolWeightText}
+                    placeholder="Select a spool to see its empty weight."
+                  />
+                </div>
+
+                <div className="field">
+                  <label htmlFor="spoolDescription">Description</label>
+                  <textarea
+                    id="spoolDescription"
+                    readOnly
+                    value={currentSpool?.description ?? ""}
+                    placeholder="Select a spool to see its description."
+                    rows={4}
+                  />
+                </div>
               </div>
 
               <div className="calculator-box">
@@ -494,40 +513,54 @@ loadSpools().then(setSpools);
                   />
                 </div>
 
-                <div className="results">
-                  <p>
-                    <strong>Estimated remaining filament:</strong>
-                  </p>
-                  <p>
-                    {remainingWeight != null
-                      ? `${remainingWeight.toFixed(1)} g`
-                      : "– g"}
-                  </p>
-                  <p>
-                    {remainingLength != null
-                      ? `${remainingLength.toFixed(1)} m (approx)`
-                      : "– m"}
-                  </p>
-                  <p>
-                    {remainingPercent != null
-                      ? `${remainingPercent.toFixed(1)} % of full filament`
-                      : "– % of full filament"}
-                  </p>
-                </div>
+                <div className="estimate-tiles">
+                  <div className="estimate-tile">
+                    <h3>Raw Estimate</h3>
+                    <dl>
+                      <dt>Weight</dt>
+                      <dd>
+                        {remainingWeight != null
+                          ? `${remainingWeight.toFixed(1)} g`
+                          : "- g"}
+                      </dd>
+                      <dt>Length</dt>
+                      <dd>
+                        {remainingLength != null
+                          ? `${remainingLength.toFixed(1)} m`
+                          : "- m"}
+                      </dd>
+                      <dt>Full</dt>
+                      <dd>
+                        {remainingPercent != null
+                          ? `${remainingPercent.toFixed(1)} %`
+                          : "- %"}
+                      </dd>
+                    </dl>
+                  </div>
 
-                <div className="field">
-                  <label htmlFor="safeRemainingWeight">
-                    Conservative remaining weight (-10%)
-                  </label>
-                  <input
-                    id="safeRemainingWeight"
-                    type="text"
-                    readOnly
-                    value={
-                      safeWeight != null ? `${safeWeight.toFixed(1)} g` : ""
-                    }
-                    placeholder="Calculated value will appear here"
-                  />
+                  <div className="estimate-tile">
+                    <h3>Conservative Estimate</h3>
+                    <dl>
+                      <dt>Weight</dt>
+                      <dd>
+                        {conservativeWeight != null
+                          ? `${conservativeWeight.toFixed(1)} g`
+                          : "- g"}
+                      </dd>
+                      <dt>Length</dt>
+                      <dd>
+                        {conservativeLength != null
+                          ? `${conservativeLength.toFixed(1)} m`
+                          : "- m"}
+                      </dd>
+                      <dt>Full</dt>
+                      <dd>
+                        {conservativePercent != null
+                          ? `${conservativePercent.toFixed(1)} %`
+                          : "- %"}
+                      </dd>
+                    </dl>
+                  </div>
                 </div>
 
                 <p className="hint">
